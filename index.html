@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Novik</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__menu">
+                <a class="header__item" href="#">Home</a>
+                <a class="header__item" href="#">About me</a>
+                <a class="header__item" href="#">Skills</a>
+                <a class="header__item" href="#">Portfolio</a>
+                <a class="header__item" href="#">Contacts</a>
+            </nav>
+            <div class="header__line"></div>
+        </div>
+    </header>
+
+    <div class="header_active">
+        <nav class="header__menu">
+            <a class="header__item" href="#">Home</a>
+            <a class="header__item" href="#">About me</a>
+            <a class="header__item" href="#">Skills</a>
+            <a class="header__item" href="#">Portfolio</a>
+            <a class="header__item" href="#">Contacts</a>
+        </nav>
+    </div>
+    <!--меню для 400px-->
+
+    <section class="designer">
+        <div class="container">
+            <div class="burger burger_active">
+                <span></span>
+            </div>
+            <div class="designer__items">
+                <strong>Denis <br> Novik</strong>
+                <div>UX | UI designer <br> 24 years old, Minsk</div>
+                <div>RU <b>| ENG</b></div>
+            </div>
+            <picture class="designer__foto">
+                <source srcset="./img/designer_400.jpg" media="(max-width: 400px)">
+                <img src="./img/designer.jpg" alt="designer_foto">
+            </picture>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="about__title">About me</h2>
+            <div class="about__texts">
+                <p>Hi, I'm Denis – UX/UI designer from Minsk.
+                    I'm interested in design and everything connected with it.</p>
+                <p>I'm studying at courses "Web and mobile design
+                    interfaces" in IT-Academy.</p>
+                <p>Ready to implement excellent projects
+                    with wonderful people.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2 class="skills__title">Skills</h2>
+            <p>I work in such programs as</p>
+            <ul class="skills__items">
+                <li class="skills__item">
+                    <img src="./img/photoshop_img.jpg" alt="photoshop_img">
+                    <p>Adobe <br> Photoshop</p>
+                    <div>
+                        <img src="./img/star.png" alt="star_icon">
+                    </div>
+                </li>
+                <li class="skills__item">
+                    <img src="./img/illustrator_img.jpg" alt="illustrator_img">
+                    <p>Adobe <br> Illustrator</p>
+                    <div>
+                        <img src="./img/star.png" alt="star_icon">
+                    </div>
+                </li>
+                <li class="skills__item">
+                    <img src="./img/effects_img.jpg" alt="effects_img">
+                    <p>Adobe <br> After Effects</p>
+                    <div>
+                        <img src="./img/star.png" alt="star_icon">
+                    </div>
+                </li>
+                <li class="skills__item">
+                    <img src="./img/figma_img.png" alt="figma_img">
+                    <p>Figma</p>
+                    <div>
+                        <img src="./img/star.png" alt="star_icon">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="portfolio__title">Portfolio</h2>
+            <img class="portfolio__img" src="./img/collection_pic.jpg" alt="collection_pic">
+            <p>Online fashion store - Homepage</p>
+            <img class="portfolio__img" src="./img/collection_pic.jpg" alt="collection_pic">
+            <p>Reebok Store - Concept</p>
+            <img class="portfolio__img" src="./img/collection_pic.jpg" alt="collection_pic">
+            <p>Braun Landing Page - Concept</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2>Contacts</h2>
+            <p>Want to know more or just chat? <br> You are welcome!</p>
+            <button>Send message</button>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p>Like me on <br> LinkedIn, Instagram, Behance, Dribble</p>
+        </div>
+    </footer>
+</body>
+
+</html>
