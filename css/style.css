@@ -40,6 +40,7 @@ body{
     max-width: 1445px;
     font-size: 18px;
     line-height: 22px;
+    margin: 0 auto;
   }
   
 .container{
@@ -109,6 +110,8 @@ strong{
     font-size: 16px;
     line-height: 20px;
     transform: rotate(-90deg);
+    margin-bottom: 23px;
+    margin-right: -18px;
 }
 
 
@@ -121,7 +124,7 @@ strong{
 .burger{
     display: none;
 }
-.header_active{
+.header-mobile{
     display: none;
 }
 
@@ -177,7 +180,7 @@ strong{
 
 
 
-/* skills-------------------*/
+/* portfolio-------------------*/
 
 .portfolio{
     text-align: center;
@@ -195,7 +198,61 @@ strong{
 .portfolio> .container > p{
    margin: 44px 0 99px;
    display: inline-block;
+   text-decoration: underline;
 }
+
+
+
+
+
+
+/* footer-------------------*/
+
+.footer{
+    text-align: center;
+    padding: 114px 0 123px;
+}
+
+.footer__content{
+    max-width: 342px;
+    margin: 0 auto;
+}
+
+.footer__items{
+    display: flex;
+    justify-content: space-between;
+    margin: 85px 0 45px;
+}
+
+.footer__content > .footer__text {
+    margin: 20px 0 29px;
+}
+.footer__content > p:last-child{
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
+
+
+.button{
+    text-align: center;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+    background-color: #070707;
+    color: #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 /* медиа-------------------*/
 
@@ -222,15 +279,61 @@ strong{
     .header{
         display: none;
     }
-    .header_active{}
+    .header-mobile{
+        display: block;
+        top: 0;
+        position: fixed;
+        height: 812px;
+        width: 100%;
+        transition: top 1s cubic-bezier(.1, -1.5, .1, 2.5);
+        background-color: #FFFFFF;
+        
+    }
+
+    .header-mobile_active{
+        top: -815px;
+    }
+
+    .header__menu{
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 66px 26px;
+        font-family: Gilroy-Bold;
+        font-size: 34px;
+        line-height: 42px;
+        
+        
+    }
+    .header__item{
+        padding-bottom: 68px;
+    }
+
+    .header__item:hover{
+        color: #090909;
+    }
+
+    .header-mobile__text{
+        transform: rotate(90deg);
+        position: absolute;
+         right: -23px;
+         font-family: Gilroy-Bold;
+         font-size: 34px;
+         line-height: 42px;
+
+    }
+    .header-mobile__text > span{
+        color: #828282;
+    }
+
 
     .burger{
         display: block;
-        position: relative;
+        position: absolute;
         width: 33px;
-        height: 20px;
+        height: 24px;
         top: 68px;
-        float: right;
+        right: 29px;
     }
         
     .burger > span::before,
@@ -247,7 +350,7 @@ strong{
         width: 100%;
         background-color: #000000;
         height: 4px;
-        top: 11px;
+        top: 10px;
     }
     .burger > span::before{
         transform: translateY(-10px);
@@ -255,6 +358,31 @@ strong{
     .burger > span::after{
      transform: translateY(10px);
     }
+
+
+    .burger_active{ 
+        position: fixed;
+        
+    }
+
+    .burger_active > span::after{
+        transform: rotate(45deg);
+        background: #828282;
+        
+    }
+
+    .burger_active > span::before{
+        transform: rotate(-45deg);
+        background: #828282;
+        
+    }
+
+    .burger_active > span {
+        background: none;
+    }  
+
+
+
 
     .designer__items > div:last-child{
         display: none;
@@ -274,6 +402,10 @@ strong{
     }
     .skills__item{
         margin-bottom: 81px;
+    }
+
+    .button{
+        width: 100%;
     }
 }
 

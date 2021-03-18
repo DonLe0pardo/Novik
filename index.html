@@ -23,7 +23,8 @@
         </div>
     </header>
 
-    <div class="header_active">
+    <!--меню для 400px-->
+    <div class="header-mobile header-mobile_active">
         <nav class="header__menu">
             <a class="header__item" href="#">Home</a>
             <a class="header__item" href="#">About me</a>
@@ -31,8 +32,9 @@
             <a class="header__item" href="#">Portfolio</a>
             <a class="header__item" href="#">Contacts</a>
         </nav>
+        <p class="header-mobile__text"> <span>RU</span> | ENG</p>
     </div>
-    <!--меню для 400px-->
+    
 
     <section class="designer">
         <div class="container">
@@ -116,18 +118,29 @@
 
     <footer class="footer">
         <div class="container">
-            <h2>Contacts</h2>
-            <p>Want to know more or just chat? <br> You are welcome!</p>
-            <button>Send message</button>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <p>Like me on <br> LinkedIn, Instagram, Behance, Dribble</p>
+            <div class="footer__content">
+                <h2>Contacts</h2>
+                <p class="footer__text">Want to know more or just chat? <br> You are welcome!</p>
+                <button class="button">Send message</button>
+                <ul class="footer__items">
+                    <li>
+                        <img src="./img/ico_1.png" alt="ico_1">
+                    </li>
+                    <li>
+                        <img src="./img/ico_2.png" alt="ico_2">
+                    </li>
+                    <li>
+                        <img src="./img/ico_3.png" alt="ico_3">
+                    </li>
+                    <li>
+                        <img src="./img/ico_4.png" alt="ico_4">
+                    </li>
+                </ul>
+                <p>Like me on <br> LinkedIn, Instagram, Behance, Dribble</p>
+            </div>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
