@@ -78,6 +78,9 @@ li{
     font-family: Gilroy-Bold;
     
 }
+.header__item:hover{
+    color: black;
+}
 
 .header__line{
     border-bottom: 1px solid #828282;
@@ -94,29 +97,40 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 40px 0 50px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
-strong{
+.designer__text-bold{
     font-family: Gilroy-Bold;
     font-size: 47.3392px;
     line-height: 59px;
+    display: flex;
+    flex-direction: column;
+    width: 125px;
 }
 
-.designer__items > div {
+.designer__text {
     font-family: Gilroy-Medium;
+    display: flex;
+    flex-direction: column;
+    width: 155px;
 }
 .designer__items > div:last-child{
     font-size: 16px;
     line-height: 20px;
+    font-family: Gilroy-Medium;
     transform: rotate(-90deg);
-    margin-bottom: 23px;
-    margin-right: -18px;
+    transform: translate(20px, -25px) rotate(-90deg);
 }
 
-
-.designer__foto > img{
+.designer__picture{
     height: 387px;
+    width: 100%;
+}
+
+.designer__picture > img{
+  /*  height: 387px; */
     width: 100%;
 }
 
@@ -137,16 +151,23 @@ strong{
 .about{
     background-color: #F6F6F6;
     text-align: center;
-    padding: 120px 0 107px;
+    
 }
-.about__texts{
+
+.about__content{
+    display: inline-block;
+    margin-top: 120px;
+    margin-bottom: 107px;
+}
+.about__content-texts{
     max-width: 485px;
     margin: 0 auto;
 }
-.about__texts > p{
+.about__content-texts > p{
     padding: 17px;
     font-family: Gilroy-Medium;
 }
+
 
 
 
@@ -155,7 +176,8 @@ strong{
 
 .skills{
     text-align: center;
-    margin: 91px 0 110px;
+    margin-top: 91px;
+    margin-bottom: 110px;
 }
 
 
@@ -171,12 +193,74 @@ strong{
 }
 
 .skills__item > p{
-  margin: 24px 0 41px;
+  margin-top: 24px;
+  margin-bottom: 41px;
   font-family: Gilroy-Bold;
   font-size: 14px;
   line-height: 17px;
   color: #828282;
+  height: 32px;
 }
+
+
+/* звезды рейтинг*/
+
+.skills__stars-rating{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.skills__stars-rating::before{
+    content: "★★★★★";
+    display: block;
+}
+
+.skills__stars-items{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+.skills__stars-input{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: 0;
+}
+
+.skills__stars-label{
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: #E5E5E5;
+}
+
+.skills__stars-label::before{
+    content: "★";
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+.skills__stars-label:hover,
+.skills__stars-label:hover ~ .skills__stars-label,
+.skills__stars-label:checked ~ .skills__stars-label:hover{
+    color: #070707;
+}
+
+
+.skills__stars-input:checked,
+.skills__stars-input:checked ~ .skills__stars-label{
+    color: #070707;
+}
+
 
 
 
@@ -185,23 +269,32 @@ strong{
 .portfolio{
     text-align: center;
     background-color: #F6F6F6;
+    
+    
 }
 
+.portfolio__content{
+    margin-top: 112px;
+    margin-bottom: 96px;
+    display: inline-block;
+}
 .portfolio__img{
     width: 100%;
 }
 
 .portfolio__title{
-    margin: 112px 0 47px;
+    margin-bottom: 47px;
 }
 
-.portfolio> .container > p{
-   margin: 44px 0 99px;
-   display: inline-block;
+.portfolio__content > p{
+   margin-top: 44px;
+   margin-bottom: 99px;
    text-decoration: underline;
 }
 
-
+.portfolio__content > p:last-child{
+    margin-bottom: 0;
+}
 
 
 
@@ -210,7 +303,8 @@ strong{
 
 .footer{
     text-align: center;
-    padding: 114px 0 123px;
+    padding-top: 114px;
+    padding-bottom: 123px;
 }
 
 .footer__content{
@@ -221,11 +315,13 @@ strong{
 .footer__items{
     display: flex;
     justify-content: space-between;
-    margin: 85px 0 45px;
+    margin-top: 85px;
+    margin-bottom: 45px;
 }
 
 .footer__content > .footer__text {
-    margin: 20px 0 29px;
+    margin-top: 20px;
+    margin-bottom: 29px;
 }
 .footer__content > p:last-child{
     font-size: 14px;
@@ -262,59 +358,54 @@ strong{
         width: 100%;
         padding: 0 12px;
     }
-    .designer__foto > img{
-    object-fit: scale-down;
-    height: auto;
-    }
+
+    
 }
 
-@media (max-width: 400px){
+@media (max-width: 560px){
     .container{
         padding: 0 29px;
     }
-    .designer__foto > img{
-        object-fit: contain;
-    }
+    
 
     .header{
         display: none;
     }
     .header-mobile{
         display: block;
-        top: 0;
+        top: -815px;
         position: fixed;
         height: 812px;
         width: 100%;
-        transition: top 1s cubic-bezier(.1, -1.5, .1, 2.5);
+        transition: top 1s ease;
         background-color: #FFFFFF;
         
     }
 
     .header-mobile_active{
-        top: -815px;
+        top: 0;
+        z-index: 1;
     }
 
     .header__menu{
-        
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 66px 26px;
+        justify-content: space-between;
+        margin: 66px 28px 66px 26px;
         font-family: Gilroy-Bold;
         font-size: 34px;
         line-height: 42px;
-        
-        
+        padding: 0;
+        height: 461px;
+       
     }
-    .header__item{
-        padding-bottom: 68px;
-    }
+    
 
     .header__item:hover{
         color: #090909;
     }
 
     .header-mobile__text{
-        transform: rotate(90deg);
+        transform: translate(0, 81px) rotate(90deg);
         position: absolute;
          right: -23px;
          font-family: Gilroy-Bold;
@@ -356,12 +447,13 @@ strong{
         transform: translateY(-10px);
     }
     .burger > span::after{
-     transform: translateY(10px);
+        transform: translateY(10px);
     }
 
 
     .burger_active{ 
         position: fixed;
+        z-index: 2;
         
     }
 
@@ -381,20 +473,17 @@ strong{
         background: none;
     }  
 
-
-
-
     .designer__items > div:last-child{
         display: none;
     }
 
     .designer__items{
         display: block;
-        padding: 53px 0 36px;
+        margin-top: 50px;
+        
     }
-    strong{
+    .designer__text-bold{
         margin-bottom: 23px;
-        display: inline-block;
     }
 
     .skills__items{
