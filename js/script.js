@@ -10,17 +10,36 @@ burger.addEventListener('click', () => {
 
 
 
-document.querySelector('.skills__stars-items').onclick = () => {
-    let rating = document.querySelectorAll('.skills__stars-input');
-    for (let i = 0; i < rating.length; i++) {
-        if (rating[i].checked) {
-            let result = rating[i].value;
-            localStorage.setItem("myKey", JSON.stringify(result));
-            break;
-        }
-    }
-     localStorage.getItem("myKey");
-      
-  };
+
+
+
+
+
+
+
+
+
+
     
- 
+    document.querySelector('.skills__stars-items-z').onclick = function onclickRadio() {
+        let nameRadio = document.getElementsByName('photoshop-rating');
+        for (var i = 0; i < nameRadio.length; i++) {
+          if (nameRadio[i].type === 'radio' && nameRadio[i].checked) {
+            valueRadio = nameRadio[i].value;       
+          }
+        }
+        localStorage.setItem("myKey", JSON.stringify(valueRadio));
+        
+    
+        
+      }
+
+      
+
+      // document.querySelector('.skills__stars-items-z').addEventListener('click', () => {
+      //   if (nameRadio[i].value >= 1) {
+      //       document.querySelector('.skills__stars-items-z').checked;
+      //        localStorage.getItem("myKey");
+      //     }
+      // });
+
